@@ -1,5 +1,9 @@
 # USDC Risk Profile App
 
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000)](https://vercel.com)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+
 A one-page Vercel-compliant application that displays the risk profile for USDC (USD Coin).
 
 ## Overview
@@ -14,9 +18,11 @@ This application provides a comprehensive risk assessment dashboard for USDC, a 
 
 ## Tech Stack
 
-- **Framework**: Next.js (Vercel-optimized)
+- **Framework**: Next.js 14 (App Router, Vercel-optimized)
 - **Styling**: CSS Modules / Tailwind CSS
+- **Language**: JavaScript/TypeScript
 - **Deployment**: Vercel
+- **Runtime**: Node.js 18+
 
 ## Getting Started
 
@@ -125,6 +131,22 @@ MIT License - see LICENSE file for details.
 ## Disclaimer
 
 This app is for informational purposes only and does not constitute financial advice. Always do your own research before making any investment decisions.
+
+## Troubleshooting
+
+### Common Issues
+
+#### Build Failures
+- Ensure Node.js version is 18.x or later: `node --version`
+- Clear `.next` cache: `rm -rf .next`
+
+#### Environment Variables Not Loading
+- Restart the development server after modifying `.env.local`
+- Use `NEXT_PUBLIC_` prefix for client-side variables
+
+#### Port Already in Use
+- Kill process on port 3000: `lsof -ti:3000 | xargs kill`
+- Or use a different port: `npm run dev -- -p 3001`
 
 ## Resources
 
